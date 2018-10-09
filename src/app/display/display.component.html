@@ -1,0 +1,23 @@
+<div >
+<table>
+  <thead>
+    <tr>
+      <th>Event Time</th>
+      <th>Event Venue</th>
+      <th>Event Description</th>
+      <th>Event Date</th>
+      <th>Event Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of sch"; [ngStyle]="{'background-color':s.status === 'important' ? 'yellow' : 'white' }">
+      <td>{{s.time }}</td>
+      <td>{{s.venue | uppercase}}</td>
+      <td>{{s.description  }}</td>
+      <td>{{s.date  }}</td>
+      
+        <td >{{s.status | uppercase}}</td>
+      </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,42 @@
+<div>
+  <h2> Enter the Schedule</h2>
+<table  border="2px red">
+  <form>
+    <tr> 
+     <th> <label for="time">Time</label></th>
+      <td><input type="text" id="time" name="time" [(ngModel)]="sch.time"/></td>
+      </tr>
+  
+  
+    <tr>  
+  
+      <th><label for="venue">Venue</label></th>
+      <td><input type="text" id="venue" name="venue" [(ngModel)]="sch.venue"/></td>
+  
+   </tr>
+<tr>
+  
+      <th><label for="description">Description</label></th>
+      <td><input type="text" id="description" name="description" [(ngModel)]="sch.description"/></td>
+  
+  </tr>
+  <tr>
+  
+      <th><label for="date">Date</label></th>
+      <!--<input datetime="dd-mm-yy" id="date" name="date" [(ngModel)]="date"/>-->
+      <td><input type="date" id="date" name="date" data-date="" data-date-format="DD MM YYYY" [(ngModel)]="sch.date" /></td>
+  </tr>
+  <tr>
+  
+      <th><label for="time">Status</label></th>
+     <td>Normal<input type="radio" id="status" name="status" value="normal" [(ngModel)]="sch.status"/>
+      Important<input type="radio" id="status" name="status" value="important" [(ngModel)]="sch.status"/></td>
+  
+  </tr>
+  <tr>
+    <th>
+    <button type="submit" (click)="addSch()">Add Schedule</button> </th>
+  </tr>
+  </form>
+</table>
+</div>
